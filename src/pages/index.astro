@@ -2,7 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
-import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 import bog1 from "../assets/images/bog1.jpg";
 import bog2 from "../assets/images/bog2.jpg";
@@ -17,7 +16,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 <MainLayout title="Titel" class="bg-gray-100">
   <section class="grid md:grid-cols-2 lg:mt-32 gap-8 p-8" id="prøvekapitel">
     <div class="animate__animated animate__fadeInRight">
-      <Image src={bog1} alt="københavnerbilleder" class="rounded-lg shadow-lg"/>
+      <Image src={bog1} alt="københavnerbilleder" class="rounded-lg shadow-lg "/>
     </div>
     <div class="text-4xl p-8 bg-gray-500 text-white rounded-lg shadow-lg animate__animated animate__fadeInUp">
       <p class="pb-8">Københavnerbilleder - en guide til hipster foto</p>
@@ -186,7 +185,7 @@ import thumbsup from "../assets/images/thumbsup.png";
         <input type="checkbox" class="mr-2"/>
         <label for="nyhedsbrev">Ja tak til nyhedsbreve og tilbud</label>
       </div>
-      <button type="submit" class="bg-sky-700 text-white py-3 px-6 rounded-full hover:bg-sky-900 transition">Fortsæt</button>
+      <button type="submit" class="bg-sky-700 text-white py-3 px-6 rounded-full hover:bg-sky-900 transition cursor-pointer">Fortsæt</button>
     </form>
   </section>
 </MainLayout>
