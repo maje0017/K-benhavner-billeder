@@ -3,12 +3,12 @@
 const { href="#", target="_self", variant= "textlink", size = "inline" } = Astro.props; 
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper
-const linkStyling = "text-white"; 
+const linkStyling = "text-black"; 
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
 const variantClasses = {
-    "textlink": "no-underline",
-    "primary": "bg-white-500 hover:bg-sky-700 border-2 border-white rounded-lg text-center",
+    "textlink": "no-underline text-black",
+    "primary": "bg-white-500 hover:bg-neutral-400 border-2 border-black rounded-lg text-center",
     "secondary": "bg-lime-500 hover:bg-lime-700"
 };
 
