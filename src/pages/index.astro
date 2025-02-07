@@ -1,0 +1,274 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import bog1 from "../assets/images/bog1.jpg";
+import billede1 from "../assets/images/billede1.jpg";
+import billede2 from "../assets/images/billede2.jpg";
+import billede3 from "../assets/images/billede3.jpg";
+import forfatter from "../assets/images/forfatter.jpg";
+import thumbsup from "../assets/images/thumbsup.png";
+---
+
+<MainLayout title="Titel" class="bg-gray-100">
+  <section class="grid md:grid-cols-2 lg:mt-32 gap-8 p-8" id="prøvekapitel">
+    <div class="animate__animated animate__fadeInRight">
+      <Image src={bog1} alt="københavnerbilleder" class="rounded-lg shadow-lg"/>
+    </div>
+    <div class="text-4xl p-8 bg-gray-500 text-white rounded-lg shadow-lg animate__animated animate__fadeInUp">
+      <p class="pb-8">Københavnerbilleder - en guide til hipster foto</p>
+      <p class="mb-8 text-2xl">af Sten Simons</p>
+      <div class="">
+        <input type="email" placeholder="E-mail" class="p-3 w-full mb-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 text-white"/>
+        <Link variant="primary" size="small" href="#prøvekapitel" class="bg-green-500 text-black py-3 px-6 rounded-full hover:bg-green-600 transition">Hent prøvekapitel</Link>
+      </div>
+    </div>
+  </section>
+
+  <section id="bogen" class="mt-32 grid lg:grid-cols-2 gap-8 mx-auto prose">
+    <article>
+      <h2 class="text-3xl font-semibold">Stamdata for bogen</h2>
+      <ul>
+        <li>Titel: Københavnerbilleder - en guide til hipster foto</li>
+        <li>Forfatter: Sten Simons</li>
+        <li>Antal sider: 344</li>
+        <li>Forlag: Mellem Linjerne</li>
+        <li>ISBN: 987-6-987654-32-1</li>
+        <li>Pris: 399.-</li>
+      </ul>
+    </article>
+    <article>
+      <h2 class="text-3xl font-semibold">Kort om bogen</h2>
+      <p>
+        Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter.
+      </p>
+    </article>
+  </section>
+
+  <section id="kapitler" class="mt-32">
+    <h2 class="text-4xl font-bold text-center mb-8">Kapitlerne</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <article class="prose">
+        <h3 class="text-xl font-semibold">Kapitel 1 - Intro til streetfood</h3>
+        <p>Hvad er street foto? Det handler om byens liv og geometri. Få en grundig intro og masser af eksempler på street fotos.</p>
+      </article>
+      <article class="prose">
+        <h3 class="text-xl font-semibold">Kapitel 2 - Om at skyde street</h3>
+        <p>Skyd street! Få teknisk indføring og masser af tips til hvordan du bedst skyder street, uanset niveau.</p>
+      </article>
+	  <article class="prose">
+        <h3 class="text-xl font-semibold">Kapitel 3 - Om at finde det rette motiv
+</h3>
+        <p>Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver.
+</p>
+      </article>
+	  <article class="prose">
+        <h3 class="text-xl font-semibold">Kapitel 4 - Digital street foto
+</h3>
+        <p>De fleste af os skyder oftest digitalt fordi det er billigere og nemmere. Og nogen teknikker og fremgangsmåder egner sig kun til digital street foto. I dette kapitel får du en række tips og tricks til digital street-foto. 
+</p>
+      </article>
+	  <article class="prose">
+        <h3 class="text-xl font-semibold">Kapitel 5 - Analog street foto
+
+</h3>
+        <p>Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det signalerer entusiasme. Nogle teknikker og fremgangsmåder egner sig bedst til analog street foto. I dette kapitel får du en række tips og tricks til analog street-foto. 
+
+</p>
+      </article>
+	  <article class="prose">
+        <h3 class="text-xl font-semibold">Kapitel 6 - Om at skyde sort/hvid
+</h3>
+        <p>Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering? Her får du en række tips og tricks til sort/hvid fotografering.
+</p>
+      </article>
+	  <article class="prose">
+        <h3 class="text-xl font-semibold">Kapitel 7 - Kreative teknikker 
+</h3>
+        <p>Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle mulige andre, spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!
+
+</p>
+      </article>
+	    <article class="prose">
+        <h3 class="text-xl font-semibold">Kapitel 8 - Kom helt tæt på! 
+</h3>
+        <p>Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…
+
+
+</p>
+      </article>
+      <!-- Continue similarly for other chapters -->
+    </div>
+  </section>
+
+  <section class="mt-32">
+    <h2 class="text-4xl font-bold text-center mb-8">Pressens udtalelser</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-auto">
+      <article class="prose p-6 bg-white rounded-lg shadow-lg">
+        <span class="font-bold">5 ud af 6 stjerner</span>
+        <p>Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.</p>
+        <p class="italic">Hanne Hovgaard, Berlingeren</p>
+      </article>
+      <article class="prose p-6 bg-white rounded-lg shadow-lg">
+        <span class="font-bold">4 ud af 6 stjerner</span>
+        <p>Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?
+</p>
+        <p class="italic">Kim Kloggaard, Fotojournalen.dk</p>
+      </article>
+      <article class="prose p-6 bg-white rounded-lg shadow-lg">
+        <span class="font-bold">6 ud af 6 stjerner</span>
+        <p>Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.</p>
+        <p class="italic">Volmer Hansen, Lukkertiden.dk</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="mt-32 grid lg:grid-cols-3 gap-4 mx-auto" id="galleri">
+    <div><Image src={billede1} alt="foto" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+    <div><Image src={billede2} alt="foto" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+    <div><Image src={billede3} alt="foto" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+<div><Image src={billede1} alt="foto" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+    <div><Image src={billede2} alt="foto" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+    <div><Image src={billede3} alt="foto" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+	<div><Image src={billede1} alt="foto" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+    <div><Image src={billede2} alt="foto" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+    <div><Image src={billede3} alt="foto" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+	<div><Image src={billede1} alt="foto" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+    <div><Image src={billede2} alt="foto" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+    <div><Image src={billede3} alt="foto" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+   
+  </section>
+
+  <section id="forfatteren" class="grid lg:grid-cols-2 gap-8 mt-32 max-w-3xl mx-auto">
+    <div>
+      <Image src={forfatter} alt="Forfatteren" class="rounded-full w-90 h-90 object-cover shadow-lg"/>
+    </div>
+    <article class="prose">
+      <h2 class="text-4xl font-bold">Forfatteren</h2>
+      <p>Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
+</p>
+<p>Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.
+</p>
+    </article>
+  </section>
+
+  <section id="køb her" class="max-w-lg mx-auto mt-32 p-6 bg-white rounded-lg shadow-xl">
+    <h2 class="text-4xl font-bold pb-6">Køb bogen nu!</h2>
+    <form class="space-y-4">
+      <label for="antal">Antal bøger:</label>
+      <input type="number" id="antal" class="p-3 w-full border rounded-lg focus:ring-2 focus:ring-green-500" placeholder="1"/>
+      
+      <span>Levering:</span>
+      <div class="space-x-4">
+        <input type="radio" id="postnord" name="levering" class="focus:ring-green-500"/>
+        <label for="postnord">Postnord</label>
+        <input type="radio" id="afhent" name="levering" class="focus:ring-green-500"/>
+        <label for="afhent">Afhent selv</label>
+      </div>
+
+      <input type="text" placeholder="Navn" class="p-3 w-full border rounded-lg"/>
+      <input type="text" placeholder="Adresse" class="p-3 w-full border rounded-lg"/>
+      <input type="text" placeholder="E-mail" class="p-3 w-full border rounded-lg"/>
+	  <input type="text" placeholder="By" class="p-3 w-full border rounded-lg"/>
+	  <input type="text" placeholder="Postnummer" class="p-3 w-full border rounded-lg"/>
+	   <input type="text" placeholder="Telefon" class="p-3 w-full border rounded-lg"/>
+      <div class="space-x-4">
+        <input type="checkbox" class="mr-2"/>
+        <label for="nyhedsbrev">Ja tak til nyhedsbreve og tilbud</label>
+      </div>
+      <button type="submit" class="bg-sky-700 text-white py-3 px-6 rounded-full hover:bg-sky-900 transition">Fortsæt</button>
+    </form>
+  </section>
+</MainLayout>
+
+<style>
+
+	
+	.slide-in-bck-top {
+	-webkit-animation: slide-in-bck-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bck-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-in-blurred-right {
+	-webkit-animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2025-2-6 17:55:49
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-blurred-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-in-bck-top {
+  0% {
+    -webkit-transform: translateZ(700px) translateY(-300px);
+            transform: translateZ(700px) translateY(-300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-top {
+  0% {
+    -webkit-transform: translateZ(700px) translateY(-300px);
+            transform: translateZ(700px) translateY(-300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+</style>
