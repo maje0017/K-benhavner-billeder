@@ -2,8 +2,11 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
+import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 import bog1 from "../assets/images/bog1.jpg";
+import bog2 from "../assets/images/bog2.jpg";
+import bog3 from "../assets/images/bog3.jpg";
 import billede1 from "../assets/images/billede1.jpg";
 import billede2 from "../assets/images/billede2.jpg";
 import billede3 from "../assets/images/billede3.jpg";
@@ -20,8 +23,8 @@ import thumbsup from "../assets/images/thumbsup.png";
       <p class="pb-8">Københavnerbilleder - en guide til hipster foto</p>
       <p class="mb-8 text-2xl">af Sten Simons</p>
       <div class="">
-        <input type="email" placeholder="E-mail" class="p-3 w-full mb-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 text-white"/>
-        <Link variant="primary" size="small" href="#prøvekapitel" class="bg-green-500 text-black py-3 px-6 rounded-full hover:bg-green-600 transition">Hent prøvekapitel</Link>
+        <input type="email" placeholder="E-mail" class="p-3 w-full mb-4 rounded-lg border border-gray-300 focus:ring-2 text-black"/>
+        <Link variant="primary" size="small" href="#prøvekapitel" class=" text-black py-3 px-6 rounded-full transition">Hent prøvekapitel</Link>
       </div>
     </div>
   </section>
@@ -47,8 +50,9 @@ import thumbsup from "../assets/images/thumbsup.png";
   </section>
 
    <section class="mt-32 grid lg:grid-cols-3 gap-4 mx-auto" id="bogbilleder">
-
-
+ <div><Image src={bog1} alt="bog1" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+ <div><Image src={bog2} alt="bog2" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
+  <div><Image src={bog3} alt="bog3" class="rounded-lg shadow-lg transform transition duration-300 hover:scale-105 w-full h-100 object-cover" loading="lazy"/></div>
    </section>
 
   <section id="kapitler" class="mt-32">
